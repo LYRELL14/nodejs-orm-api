@@ -17,6 +17,7 @@ async function initialize() {
     
     // int models and add them to the exported db odject
     db.User = require('../users/user.model')(sequelize);
+    db.User = require('../products/product.model')(sequelize);
 
     // sync all models with database
     await sequelize.sync({ alter: true});
